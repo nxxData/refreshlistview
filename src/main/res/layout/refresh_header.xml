@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--下拉刷新控件-->
+    <LinearLayout
+        android:id="@+id/ll_pull_down_refresh"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_refresh"
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:scaleType="fitXY"/>
+                    <ProgressBar
+                        android:visibility="gone"
+                        android:id="@+id/pb_status"
+                        android:indeterminateDrawable="@drawable/custom_progressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/tv_status"
+                    android:text="下拉刷新"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@+id/tv_time"
+                android:text="上次更新时间：01-15 14:54"
+                android:textColor="#55000000"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
